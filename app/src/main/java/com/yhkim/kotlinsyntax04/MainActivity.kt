@@ -62,5 +62,33 @@ class MainActivity : AppCompatActivity() {
         userList.remove(user3)
         Log.d("들어있는 사람수", "${userList.size} 명")
 
+//        var count = 0
+//        while ( true ) {
+//
+//            count++
+//
+//            if (count >= 10) {
+//                break
+//            }
+//        }
+
+        userList.add(user3)
+        Log.d("user3 추가후 들어있는 사람수", "${userList.size} 명")
+
+        val user4 = User()
+        user4.name = "장비"
+        user4.loginId = "jangbee01"
+        userList.add(user4)
+
+//        사용자 목록에 들어있는 사람들이 이름/ 아이디 출력
+        for(user in userList) {
+            Log.d("사람이름/아이디", "${user.name} / ${user.loginId}")
+        }
+
+        for(i in 0..5) {
+            Log.d("뽑힌 숫자", "${i}")
+        }
+
+
     }
 }
