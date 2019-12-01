@@ -89,6 +89,19 @@ class MainActivity : AppCompatActivity() {
             Log.d("뽑힌 숫자", "${i}")
         }
 
+//        var user5:User = null //error !!
+        var user5:User? = null //error !!
+        user5?.name
+        //일반 변수 타입에 null이 절대 못들어간다.
+        //null 고려한다면 자료형태에 ?를 붙히자
 
-    }
+        //############ 단축키 ###############
+        //alt + return 에러탐색
+        //Ctl + space 코드자동탐색
+        //Ctl + Alt + o : import 정리
+        //--------------------------------
+
+
+
+   }
 }
