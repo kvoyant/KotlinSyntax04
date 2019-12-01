@@ -3,6 +3,7 @@ package com.yhkim.kotlinsyntax04
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.yhkim.kotlinsyntax04.datas.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +36,31 @@ class MainActivity : AppCompatActivity() {
 //        맨 앞의 자료를 삭제하고 싶다
         lottoNumArr.removeAt(0)
 
+        val userList = ArrayList<User>()
+        val user1 = User()
+        user1.name = "김영호"
+        user1.loginId = "kyh1234"
+        userList.add(user1)
+
+        val user2 = User()
+        user2.name = "홍길동"
+        user2.loginId = "hgd01"
+        userList.add(user2)
+
+        Log.d("들어있는 사람수", "${userList.size} 명")
+
+        Log.d("1번칸에 들어있는 사람이름", "${userList.get(1).name}")
+
+        val user3 = User()
+        user3.name = "김영호"
+        user3.loginId = "kyh1234"
+
+        Log.d("김영호가 있는 위치", "${userList.indexOf(user3)}")
+        //-1 찾지 못함 : indexOf
+        //0 : User equals override 해서 재정의 했을 경우
+
+        userList.remove(user3)
+        Log.d("들어있는 사람수", "${userList.size} 명")
 
     }
 }
